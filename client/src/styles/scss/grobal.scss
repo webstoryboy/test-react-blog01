@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.eot');
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.eot?#iefix') format('embedded-opentype'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.woff2') format('woff2'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.woff') format('woff'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.eot');
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.eot?#iefix') format('embedded-opentype'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.woff2') format('woff2'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.woff') format('woff'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.eot');
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.eot?#iefix') format('embedded-opentype'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.woff2') format('woff2'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.woff') format('woff'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 800;
+    font-style: normal;
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.eot');
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.eot?#iefix') format('embedded-opentype'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.woff2') format('woff2'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.woff') format('woff'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 900;
+    font-style: normal;
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.eot');
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.eot?#iefix') format('embedded-opentype'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.woff2') format('woff2'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.woff') format('woff'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.ttf') format("truetype");
+    font-display: swap;
+}
+
+:root {
+    --black: #000;
+    --black100: #1d1d1d;
+    --black200: #444;
+    --black300: #666;
+    --black400: #bbb;
+    --black500: #ececec;
+
+    --white: #fff;
+    --white100: #f1f1f1;
+    --white200: #fff;
+    --white300: #fff;
+    --white400: #fff;
+    --white500: #fff;
+
+    --fontN: "NanumSquareNeo";
+    --fontG: "GmarketSans";
+    --fontO: "Orbitron";
+
+    --searchImg: url(../../../public/svg/search.svg);
+    --darkImg: url(../../../public/svg/dark.svg);
+    --navImg: url(../../../public/svg/nav.svg);
+    --logoutImg: url(../../../public/svg/logout.svg);
+
+    // 기본 폰트 설정 
+    font-family: var(--fontN);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    // 아이폰 가로 모드에서 글씨 확대 금지
+    -webkit-text-size-adjust: 100%;
+}
+
+// 공통 요소
+.container {
+    max-width: 1460px;
+    width: 96%;
+    margin: 0 auto;
+}
+
+.none {
+    display: none;
+}
+
+// margin
+.mt0 {
+    margin-top: 0;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.mt50 {
+    margin-top: 50px;
+}
+
+.mt60 {
+    margin-top: 60px;
+}
+
+.mt70 {
+    margin-top: 70px;
+}
+
+.mt80 {
+    margin-top: 80px;
+}
+
+.mt90 {
+    margin-top: 90px;
+}
+
+.mt100 {
+    margin-top: 100px;
+}
+
+@media (max-width: 800px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+/* 여백 초기화 */
+body,
+div,
+dl,
+dd,
+dt,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+p,
+table,
+th,
+td,
+input,
+figure,
+figcaption,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+// box-sizing 초기화
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/* 폰트 초기화 */
+body,
+button,
+input,
+select,
+table,
+textarea {
+    font-family: var(--fontN), var(--fontG), 'AppleSDGothicNeo-Regular', 'Malgun Gothic', '맑은 고딕', 'dotum', '돋움';
+}
+
+// 링크 초기화
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+// 목록 초기화 
+li,
+ol,
+ul {
+    list-style: none;
+}
+
+// 제목 초기화
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+// 폰트 스타일
+em,
+address {
+    font-style: normal;
+}
+
+// 이미지 초기화 
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+// 보더 초기화
+img,
+fieldset,
+button {
+    border: 0;
+}
+
+// 버튼 초기화
+button {
+    overflow: visible;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+// 디자인 초기화
+input,
+button,
+select {
+    border-radius: 0;
+    appearance: none;
+}
+
+// 테이블 초기화 
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+// 블라인드 효과
+.blind {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+// header
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    width: 100%;
+    background-color: var(--white);
+    transition: transform .4s;
+    border-bottom: 1px solid #f7f7f7;
+}
+
+.header__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2005;
+    padding: 10px;
+    max-width: 1900px;
+
+    .header__logo {
+        width: 160px;
+
+        a {
+            padding: 10px;
+            font-family: var(--fontO);
+            font-weight: 300;
+            font-size: 1.625rem;
+            text-transform: capitalize;
+        }
+    }
+
+    .header__nav {
+        ul {
+            display: flex;
+
+            li {
+                margin: 3px;
+                border-radius: 5px;
+
+                a {
+                    padding: 10px;
+                    font-size: 14px;
+                    margin: 10px;
+                    font-weight: 500;
+                }
+
+                &.active {
+                    background-color: #eeeeee;
+                }
+            }
+        }
+    }
+
+    .header__utils {
+        text-align: right;
+        display: flex;
+        align-items: center;
+
+        button {
+            margin: 0 10px;
+            width: 1.5rem;
+            height: 1.5rem;
+            background-size: 100%;
+            transition: background-image .4s;
+        }
+
+        .search {
+            background-image: var(--searchImg);
+        }
+
+        .darkmode {
+            background-image: var(--darkImg);
+        }
+
+        .navBtn {
+            background-image: var(--navImg);
+            display: none;
+        }
+
+        a {
+            display: inline-block;
+            background-color: var(--white100);
+            padding: 3px 16px;
+            border-radius: 40px;
+
+            &:hover {
+                background-color: var(--black500);
+            }
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .header__inner {
+        .header__nav {
+            display: none;
+        }
+
+        .header__utils {
+            .navBtn {
+                display: inline-block;
+            }
+        }
+    }
+
+}
+
+// main
+#main {
+    margin-top: 70px;
+    min-height: 80vh;
+}
+
+// blog__inner
+.blog__inner {
+    >h3 {
+        font-family: var(--fontO);
+        font-size: 1.3rem;
+        margin-bottom: 4px;
+        font-weight: 100;
+    }
+
+    .blog__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-auto-rows: 1fr;
+        gap: 1rem;
+
+        .blog {
+            a {
+                .blog__img {
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    width: 100%;
+                    padding-top: 56.579%;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                }
+
+                .blog__text {
+                    .date {
+                        display: block;
+                        margin-top: 12px;
+                        font-size: 12px;
+                        line-height: 2.16;
+                        color: var(--black400);
+                    }
+
+                    .title {
+                        font-size: 1rem;
+                        font-weight: 400;
+                        margin-bottom: 15px;
+                        display: block;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+
+                        &:hover {
+                            color: #09a95c;
+                        }
+                    }
+
+                    .keyword {
+                        span {
+                            display: inline-block;
+                            margin: 0 5px 5px 0;
+                            padding: 2px 15px;
+                            background-color: var(--white100);
+                            font-size: 12px;
+                            font-weight: 700;
+                            line-height: 24px;
+                            color: var(--black200);
+                            text-transform: uppercase;
+                            border-radius: 40px;
+
+                            &:hover {
+                                color: #09a95c;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// member__inner
+.member__inner {
+    width: 360px;
+    margin: 100px auto;
+
+    >h3 {
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: var(--fontG);
+        margin-bottom: 1rem;
+    }
+}
+
+// join__form
+.join__form {
+    label {
+        display: none;
+    }
+
+    input {
+        border: 1px solid #ccc;
+        width: 100%;
+        padding: 1rem;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .msg {
+        font-size: 14px;
+        color: red;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    .join__btn {
+        button {
+            width: 100%;
+            background-color: var(--black);
+            color: var(--white);
+            padding: 1rem;
+        }
+    }
+}
+
+// board
+.board__table {
+    table {
+        border-top: 1px solid #000;
+    }
+}
+
+// footer
+#footer {
+    border-top: 1px solid #f7f7f7
+}
