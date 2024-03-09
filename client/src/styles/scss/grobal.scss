@@ -106,10 +106,10 @@
 
     --white: #fff;
     --white100: #f1f1f1;
-    --white200: #fff;
-    --white300: #fff;
-    --white400: #fff;
-    --white500: #fff;
+    --white200: #e7e7e7;
+    --white300: #dddddd;
+    --white400: #d1d1d1;
+    --white500: #c7c7c7;
 
     --fontN: "NanumSquareNeo";
     --fontG: "GmarketSans";
@@ -119,6 +119,12 @@
     --darkImg: url(../../../public/svg/dark.svg);
     --navImg: url(../../../public/svg/nav.svg);
     --logoutImg: url(../../../public/svg/logout.svg);
+    --arrowLeftImg: url(../../../public/svg/arrow-left.svg);
+    --arrowRightImg: url(../../../public/svg/arrow-right.svg);
+    --instarImg: url(../../../public/svg/instagram.svg);
+    --youtubeImg: url(../../../public/svg/youtube.svg);
+    --githubImg: url(../../../public/svg/github.svg);
+    --slackImg: url(../../../public/svg/slack.svg);
 
     // 기본 폰트 설정 
     font-family: var(--fontN);
@@ -551,13 +557,264 @@ table {
 }
 
 // board
+.board__inner {
+    padding-top: 100px;
+
+    h3 {
+        padding: 50px 0;
+        font-size: 40px;
+    }
+}
+
+.board__search {
+    display: flex;
+    justify-content: flex-end;
+
+    .search {
+        position: relative;
+
+        input {
+            border: 1px solid var(--black400);
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 300px;
+            outline: none;
+
+            &::placeholder {
+                color: var(--black400);
+                text-transform: uppercase;
+            }
+
+            &:focus {
+                border: 1px solid var(--black);
+            }
+        }
+
+        button {
+            position: absolute;
+            right: 9px;
+            top: 9px;
+            background-image: var(--searchImg);
+            background-size: contain;
+            background-color: var(--white);
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .btn {
+        a {
+            background-color: var(--black);
+            color: var(--white);
+            margin-left: 10px;
+            height: 37px;
+            line-height: 37px;
+            display: inline-block;
+            font-size: 14px;
+            padding: 0 20px;
+            vertical-align: 2px;
+        }
+    }
+}
+
 .board__table {
     table {
-        border-top: 1px solid #000;
+        border-top: 2px solid var(--black);
+
+        tbody {
+            tr {
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: var(--white100);
+                }
+            }
+        }
+
+
+        th {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--black100);
+        }
+
+        td {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--white100);
+            font-size: 14px;
+            text-align: center;
+            color: var(--black300);
+
+            &:nth-child(2) {
+                text-align: left;
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+.board__page {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+
+    .pageLeft {
+        width: 24px;
+        height: 24px;
+        background-image: var(--arrowLeftImg);
+        background-color: var(--white100);
+        margin-right: 20px;
+        border-radius: 50px;
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .pageRight {
+        width: 24px;
+        height: 24px;
+        background-image: var(--arrowRightImg);
+        background-color: var(--white100);
+        margin-left: 20px;
+        border-radius: 50px;
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    ul {
+        display: flex;
+
+        li {
+            a {
+                color: var(--white300);
+                padding: 10px;
+
+                &:hover {
+                    color: var(--black300);
+                }
+
+                &.active {
+                    color: var(--black100);
+                }
+            }
+        }
+    }
+}
+
+.board__write {
+    label {
+        display: none;
+    }
+
+    input {
+        width: 100%;
+        border: 1px solid var(--white500);
+        padding: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .quill {
+        margin-bottom: 10px;
+
+        .ql-editor {
+            min-height: 500px;
+        }
+    }
+
+    .btn {
+        text-align: right;
+
+        button {
+            background-color: var(--black);
+            padding: 0.8rem 1.2rem;
+            color: var(--white)
+        }
+    }
+}
+
+.board__view {
+    h4 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .info {
+        text-align: center;
+
+        span {
+            color: var(--black400);
+            font-size: 14px;
+            padding: 0 4px;
+        }
+    }
+
+    .contents {
+        padding: 100px 25%;
+        line-height: 1.8;
+        color: var(--black300);
+
+        p {
+            margin-bottom: 10px;
+        }
     }
 }
 
 // footer
 #footer {
-    border-top: 1px solid #f7f7f7
+    border-top: 1px solid #f7f7f7;
+    margin-top: 100px;
+
+    .footer__inner {
+        padding: 40px 0;
+        display: flex;
+        justify-content: space-between;
+
+        .left {
+            h6 {
+                font-family: var(--fontO);
+                text-transform: uppercase;
+                font-size: 20px;
+
+            }
+
+            p {
+                font-size: 12px;
+                color: var(--black400);
+                margin-bottom: 1rem;
+            }
+
+            .sns {
+                ul {
+                    display: flex;
+
+                    li {
+                        width: 26px;
+                        height: 26px;
+                        background-color: var(--black);
+                        margin-right: 3px;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        border-radius: 50%;
+                        background-size: 60%;
+
+                        &:nth-child(1) {
+                            background-image: var(--instarImg);
+                        }
+
+                        &:nth-child(2) {
+                            background-image: var(--youtubeImg);
+                        }
+
+                        &:nth-child(3) {
+                            background-image: var(--githubImg);
+                        }
+
+                        &:nth-child(4) {
+                            background-image: var(--slackImg);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

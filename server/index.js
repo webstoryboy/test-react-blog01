@@ -5,10 +5,15 @@ const cors = require('cors');
 
 const mongoose = require('mongoose');
 const User = require('./models/User');
+const Board = require('./models/Board');
 
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
+
+const multer = require('multer');
+const uploadMiddleware = multer({ dest: 'uploads/' });
+const fs = require('fs');
 
 const salt = bcrypt.genSaltSync(10);
 const secret = 'webstoryboy';
@@ -16,6 +21,7 @@ const secret = 'webstoryboy';
 app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 app.use(express.json());
 app.use(cookieParser());
+app.use('/uploads', express.static(__dirname + '/uploads'));
 
 mongoose.connect("mongodb+srv://webstupids:forever0@cluster0.icy3l1c.mongodb.net/blog?retryWrites=true&w=majority");
 
@@ -97,6 +103,50 @@ app.post('/logout', (req, res) => {
     // 쿠키를 비워서 로그아웃 처리
     res.cookie('token', '').json({ message: 'ok' });
 });
+
+
+// 게시판
+app.post('/board', uploadMiddleware.single('file'), async (req, res) => {
+    // res.json({ files: req.file });
+    // 이미지 설정
+    let newPath;
+    if (req.file) {
+        const { originalname, path } = req.file;
+        const parts = originalname.split('.');
+        const ext = parts[parts.length - 1];
+        // res.json({ ext })
+        newPath = path + '.' + ext;
+        fs.renameSync(path, newPath);
+    }
+
+    const { token } = req.cookies;
+    jwt.verify(token, secret, async (err, info) => {
+        if (err) {
+            return res.status(403).json({ message: "인증 실패" });
+        }
+
+        const { title, content } = req.body;
+        const boardDoc = await Board.create({
+            title,
+            content,
+            cover: newPath,
+            author: info.id
+        });
+
+        res.json(boardDoc);
+    });
+});
+
+// 게시판 글 가져오기
+app.get('/post', async (req, res) => {
+    res.json(
+        await Board.find()
+            .populate('author', ['username'])
+            .sort({ createdAt: -1 })
+            .limit(20)
+    )
+});
+
 
 
 app.listen(port, () => {

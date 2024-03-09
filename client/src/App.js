@@ -4,6 +4,8 @@ import Header from './components/layout/Header'
 import Main from './components/layout/Main'
 import Home from './pages/Home'
 import Board from './pages/Board'
+import BoardWrite from './pages/BoardWrite'
+import BoardView from './pages/BoardView'
 import Blog from './pages/Blog'
 import Login from './pages/Login'
 import Register from './pages/Register'
@@ -19,6 +21,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/board" element={<Board />}></Route>
+            <Route path="/board/:id" element={<BoardView />}></Route>
+            <Route path="/boardWrite" element={<BoardWrite />}></Route>
             <Route path="/blog" element={<Blog />}></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route path="/register" element={<Register />}></Route>

@@ -36,9 +36,7 @@ const Header = () => {
         <header id='header'>
             <div className='header__inner'>
                 <h1 className='header__logo'>
-                    <Link to='/'>
-                        websblog
-                    </Link>
+                    <Link to='/'>webslopoer</Link>
                 </h1>
                 <nav className='header__nav'>
                     <ul>

@@ -3,6 +3,7 @@
 `npx create-react-app .`
 `npm i sass`
 `npm i react-router-dom`
+`npm i react-quill`
 
 
 # server
